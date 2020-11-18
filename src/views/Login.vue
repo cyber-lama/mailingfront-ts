@@ -14,7 +14,7 @@
       <input v-on:input="(event) => setPass(event)"
              class="login__form-input" type="text" placeholder="Пароль"
              v-model="password"/>
-      <button class="login__form-submit">Вход</button>
+      <button v-on:click="() => submit()" class="login__form-submit">Вход</button>
       <!--      </div>-->
     </div>
   </section>
@@ -50,6 +50,11 @@ export default {
         this.submit();
       }
     },
+    submit() {
+      const username = this.email;
+      const password = this.password;
+      this.$store.dispatch('login', { username, password });
+    },
 
   },
   mounted() {
@@ -60,4 +65,8 @@ export default {
 };
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+@import "src/style/components/auth/login";
+</style>
 

@@ -11,8 +11,12 @@ export default {
 
   methods: {
     logout() {
+      this.$store.dispatch('logOut');
     },
   },
 };
 </script>
 
+<style type="scss">
+@import "/src/style/components/auth/logout";
+</style>

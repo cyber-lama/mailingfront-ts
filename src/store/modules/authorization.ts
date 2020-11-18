@@ -8,7 +8,7 @@ export default {
     login: (context, payload) => {
       apiLogin(JSON.stringify(payload))
         .then((response) => {
-          router.push({ path: 'analytics' });
+          router.push({ path: '/analytics' });
           const { data } = response;
           localStorage.setItem('accessToken', data.access_token);
           localStorage.setItem('refreshToken', data.refresh_token);
