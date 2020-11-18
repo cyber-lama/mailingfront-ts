@@ -1,0 +1,65 @@
+@import '../mixins';
+.search__form {
+  width: 100%;
+  display: flex;
+  margin-right: 30px;
+
+  &-button {
+    @include button;
+    margin-right: 23px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-input-label {
+    display: block;
+    position: relative;
+    margin-right: 36px;
+    width: 100%;
+  }
+
+  &-input {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 55px rgba(18, 45, 116, 0.2);
+    border-radius: 20px;
+    padding: 15px 0 15px 85px;
+    position: relative;
+    border: none;
+    font-family: "PoppinsRegular", "Arial", sans-serif;
+    font-size: 22px;
+    outline: none;
+    &::placeholder {
+      color: #C4C4C4;
+    }
+  }
+
+  &-button-icon {
+    position: absolute;
+    left: 19px;
+    top: 13px;
+    width: 32px;
+    height: 30px;
+    background: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 30px;
+      background: url("/static/images/icons/search-icon_templates.svg") no-repeat 50% 50%;
+      right: 0;
+      top: 0;
+    }
+  }
+
+}

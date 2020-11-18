@@ -1,0 +1,13 @@
+@import "../mixins";
+.analytics {
+  @include mainBlock;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include title;
+  }
+
+}

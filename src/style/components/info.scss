@@ -1,0 +1,18 @@
+.info {
+  position: absolute;
+  width: 100%;
+  //height: 60px;
+  display: flex;
+  justify-content: center;
+  &__wrapper {
+    text-align: center;
+    background-color: lightsalmon;
+    font-family: "PoppinsBold", "Arial", sans-serif;
+    //font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

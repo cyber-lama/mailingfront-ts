@@ -1,0 +1,50 @@
+@import "./mixins";
+
+.mailing {
+  width: 100%;
+  padding: 34px;
+  position: relative;
+
+  &__logout-wr {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 200px;
+  }
+
+  &__wrapper {
+    //max-width: 500px;
+    background-color: #ffffff;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__block {
+    width: 40%;
+  }
+
+  &__title {
+    @include title;
+    margin-top: 10px;
+    margin-bottom: 46px;
+  }
+
+  &__form {
+    &-input {
+      @include input;
+
+      &-label {
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+
+  &__end {
+    &-item {
+      &--selected {
+        background-color: lightsalmon;
+      }
+    }
+  }
+}

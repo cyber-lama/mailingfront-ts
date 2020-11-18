@@ -1,0 +1,31 @@
+@import '../mixins';
+
+.templates {
+  @include mainBlock;
+  padding-bottom: 92px;
+  box-sizing: border-box;
+}
+
+.header {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__wrapper-title {
+    @include title;
+  }
+}
+.search {
+  &__wrapper {
+    display: flex;
+    margin-bottom: 38px;
+  }
+
+  &__wrapper-button {
+    @include button;
+  }
+}
+

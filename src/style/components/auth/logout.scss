@@ -1,0 +1,15 @@
+.logout {
+  position: relative;
+  &__btn {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: url("/static/images/icons/logout_icon.svg") no-repeat 50% 50%;
+      right: 0;
+      top: 0;
+
+    }
+  }
+}

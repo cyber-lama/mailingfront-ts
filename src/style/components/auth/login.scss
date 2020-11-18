@@ -1,0 +1,113 @@
+@use "sass:list";
+@import "../mixins";
+
+@function createBackground ($counter) {
+  $url: url("/static/images/background/auth_backgr.svg");
+  $bgList: ();
+  @for $i from 1 through $counter {
+    $bgList: list.append($bgList, $url, $separator: comma)
+  }
+  @return $bgList;
+}
+
+@function createBackgroundPosition ($pos1, $pos2, $count) {
+  $posList: ();
+  @for $i from 1 through $count {
+    $posList: list.append($posList, (((random($pos1) ) * $i ) * 3 + px ((random($pos2) ) + $i ) * 10 + px), $separator: comma)
+  }
+  @return $posList;
+}
+
+.login {
+  background-image: createBackground(25);
+  background-position: 1% -1%, 15% 5%, 30% 1%, 55% 13%, 75% 5%, 85% -2%, 95% 20%, 90% 40%, 82% 45%,
+  97% 75%, 75% 85%, 100% 100%, 65% 95%, 50% 99%, 48% 80%, 35% 87%, 28% 70%, 23% 40%, 20% 70%, 5% 90%,
+  1% 70%, 13% 46%, 8% 18%, 4% 35%, 2% 2%;
+  background-repeat: no-repeat;
+  background-color: #E5E5E5;
+  width: 100%;
+  border-radius: 0 38px 38px 0;
+  position: relative;
+
+  &__wrapper {
+    //outline: 3px solid red;
+    //width: 100%;
+    //height: 100%;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+  }
+
+  &__title {
+    @include title;
+    color: #3498DB;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 685px;
+    height: 464px;
+    background: #7DA3DE;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 75px;
+
+    &-title {
+      @include title;
+      color: #ffffff;
+      margin-top: 31px;
+      margin-bottom: 54px;
+    }
+
+    &-input {
+      width: 100%;
+      height: 65px;
+      background: #F4F6F9;
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 25px;
+      padding: 20px;
+      outline: none;
+      font-family: "PoppinsRegular", "Arial", sans-serif;
+      font-size: 22px;
+      line-height: 26px;
+      color: #000000;
+
+      &:nth-of-type(1) {
+        margin-bottom: 24px;
+      }
+
+      &::-webkit-input-placeholder {
+        font-family: "PoppinsRegular", "Arial", sans-serif;
+        font-size: 22px;
+        line-height: 26px;
+        color: #000000;
+      }
+    }
+
+    &-submit {
+      font-family: "PoppinsRegular", "Arial", sans-serif;
+      margin-top: 54px;
+      font-size: 22px;
+      line-height: 26px;
+      background: #7DA3DE;
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+      padding: 19px 114px 20px 114px;
+      border-radius: 25px;
+      color: #F4F6F9;
+      outline: none;
+    }
+  }
+}
