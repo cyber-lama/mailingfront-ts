@@ -13,7 +13,7 @@ export default {
           localStorage.setItem('accessToken', data.access_token);
           localStorage.setItem('refreshToken', data.refresh_token);
           const dateNow = Math.round(new Date().getTime() / 1000);
-          localStorage.setItem('expires_in', parseInt(data.expires_in, 10) + dateNow);
+          localStorage.setItem('expires_in', parseInt(data.expires_in, 10).toString() + dateNow);
           context.commit('isLogin', true);
           context.commit('setIsLocked', false);
         });

@@ -123,7 +123,7 @@ export default {
       // console.log(payload);
       axios.post('https://mailing.dev.dengisrazy.ru/mailing/create', testData)
         .then((response) => {
-          console.log(response.message);
+          console.log(response);
         })
         .catch((response) => {
           console.log(response.message, 'МУТАТОР');

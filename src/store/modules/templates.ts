@@ -1,5 +1,5 @@
 import { apiGetTemplates } from '../../services/Api';
-
+import axios from 'axios';
 export default {
   actions: {
     async getTemplates(ctx) {

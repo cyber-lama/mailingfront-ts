@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false, // Включите все параметры строгой проверки типов
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "noImplicitAny": false, // Вызывать ошибку в выражениях и объявлениях с подразумеваемым типом any.
     "baseUrl": ".",
     "types": [
       "webpack-env"
