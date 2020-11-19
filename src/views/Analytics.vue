@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import Logout from '../components/auth/Logout';
-import DateSelector from '../components/analytics/DateSelector';
-import MailingType from '../components/analytics/MailingType';
+import Logout from '../components/auth/Logout.vue';
+import DateSelector from '../components/analytics/DateSelector.vue';
+import MailingType from '../components/analytics/MailingType.vue';
 
 export default {
   name: 'Analytics',
@@ -56,6 +56,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-@import "../style/components/menu";
 @import "../style/components/analytics/analytics";
 </style>

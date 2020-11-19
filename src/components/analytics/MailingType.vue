@@ -32,6 +32,6 @@ export default {
 };
 </script>
 
-<style type="scss">
-@import "../../style/components/analytics/mailingtype.scss";
+<style lang="scss">
+@import "../../style/components/analytics/mailingtype";
 </style>

@@ -17,6 +17,6 @@ export default {
 };
 </script>
 
-<style type="scss">
-@import "/src/style/components/auth/logout";
+<style lang="scss">
+@import "../../style/components/auth/logout";
 </style>
