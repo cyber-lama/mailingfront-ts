@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Logout from '../components/auth/Logout';
+import Logout from '@/components/auth/Logout';
 
 export default {
   name: 'Projects',

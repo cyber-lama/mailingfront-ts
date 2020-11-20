@@ -43,7 +43,7 @@
         <div class="mailing__block">
           <div class="mailing__form-input-label">
             <p class="mailing__form-input-text">Условие</p>
-            <ul v-for="filter in selectedFilters">
+            <ul v-for="filter in selectedFilters" :key="filter.id">
               <li>
                 <!--                {{filter.filter_action_id}}-->
                 <!--                {{filter.filter_field_id}}-->
@@ -104,14 +104,13 @@
                 Фильтр
               </h2>
               <ul v-if="showFilters"
-                  v-for="filter in this.$store.getters.getFiltersScopes"
-              >
+                  v-for="filter in this.$store.getters.getFiltersScopes" :key="filter.id">
                 <li
                     @click="() => {showFiltersField(filter.id);}"
                 >
                   {{ filter.name }}
                   <ul v-if="showFilterFields === filter.id"
-                      v-for="fields in filter.fields">
+                      v-for="fields in filter.fields" :key="fields.id">
                     <li @click="setAllFilterData(filter.id, fields.id, fields.name)">
                       <p>{{ fields.id }}</p>
                       <p>{{ fields.name }}</p>

@@ -49,7 +49,8 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "@typescript-eslint/camelcase": "off"
+      "@typescript-eslint/camelcase": "off",
+      "vue/no-use-v-if-with-v-for": "off"
     }
   },
   "browserslist": [

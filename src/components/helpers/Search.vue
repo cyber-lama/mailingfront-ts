@@ -38,20 +38,13 @@ export default {
   methods: {
     search() {
       this.$emit('searched', true);
-      const reloadAllitems = new Promise((resolve) => {
-        this.$store.dispatch(this.action);
-        setTimeout(() => {
-          resolve();
-        }, 1000);
-      });
-      reloadAllitems.then(() => {
-        if (this.searchValue.length > 0) {
-          const filtered = this.values.filter(
-              item => item.name.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1,
-          );
-          this.$store.commit(this.mutation, filtered);
-        } else this.$store.dispatch(this.action);
-      });
+      this.$store.dispatch(this.action);
+      if (this.searchValue.length > 0) {
+        const filtered = this.values.filter(
+            item => item.name.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1,
+        );
+        this.$store.commit(this.mutation, filtered);
+      } else this.$store.dispatch(this.action);
     },
   },
 };

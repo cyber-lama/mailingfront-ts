@@ -37,17 +37,18 @@
       <button
         :disabled="pageNumber === 0"
         @click="prevPage">
-        <img src="static/images/icons/arrow-left.svg" alt="">
+        <img src="/static/images/icons/arrow-left.svg" alt="arrow-left">
       </button>
       <ul>
-        <li v-for="index in pageCount" :disabled="pageNumber === index - 1" @click="goPage(index)">
+        <li v-for="index in pageCount" :key="index.id"  :disabled="pageNumber === index - 1? '' : disabled" @click="goPage(index)">
           {{index}}
         </li>
       </ul>
       <button
         :disabled="pageNumber >= pageCount -1"
         @click="nextPage">
-        <img src="static/images/icons/arrow-right.svg" alt="">
+        <img src="/src/img/transfer-sent-watch.svg" alt="arrow-right">
+        <img alt="Vue logo" src="@/assets/logo.png">
       </button>
     </div>
   </div>
@@ -144,8 +145,8 @@ export default {
     paginatedData() {
       const start = this.pageNumber * this.size;
       const end = start + this.size;
-      return this.items
-        .slice(start, end);
+      console.log(start, end, this.items)
+      return this.items.slice(start, end);
     },
   },
   mounted() {
@@ -153,7 +154,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-</style>

@@ -75,9 +75,9 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import Logout from '../components/auth/Logout';
-import Search from '../components/helpers/Search';
-import ListItems from '../components/templates/ListItems';
+import Logout from '@/components/auth/Logout';
+import Search from '@/components/helpers/Search';
+import ListItems from '@/components/templates/ListItems';
 
 export default {
   components: { Logout, Search, ListItems },
@@ -127,5 +127,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/components/templates/templates.scss';
+@import '../style/components/templates/templates';
 </style>

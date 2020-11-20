@@ -7,14 +7,14 @@
     <div v-if="item.project" class="list__item-project">{{ item.project }}</div>
     <div v-if="item.events" class="list__item-event">
       <ul>
-        <li v-for="(event, index) in item.events">
-         <span> {{ index }} </span> {{ event }}
+        <li v-for="item in item.events" :key="item.id">
+          <span> {{ item.index }} </span> {{ item.event }}
         </li>
       </ul>
     </div>
     <div v-if="item.channels" class="list__item-channels">
       <ul>
-        <li v-for="channel in item.channels">{{channel}}</li>
+        <li v-for="channel in item.channels" :key="channel.id">{{channel}}</li>
       </ul>
     </div>
     <div v-if="item.status" class="list__item-status">{{ item.status }}</div>
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     formattedDate(d) {
-      const arr = (d.replace(/\-/g, '.')).split(/T/);
+      const arr = (d.replace(/-/g, '.')).split(/T/);
       return `${`${arr[1].slice(0, -8)} ${arr[0]}`}`;
     },
     editTemplate() {
@@ -78,6 +78,7 @@ export default {
       };
 
       document.addEventListener('click', onClickOutside);
+      // eslint-disable-next-line vue/no-deprecated-events-api
       this.$on('hook:beforeDestroy', () => document.removeEventListener('click', onClickOutside));
     },
   },

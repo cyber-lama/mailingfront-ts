@@ -1,0 +1,86 @@
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    background-color: #ffffff;
+    &::before {
+      position: absolute;
+      right: 10px;
+      top: 45%;
+      content: "";
+      border-top: 7px solid rgba(0, 0, 0, 0.25);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+
+    }
+  }
+
+  .active {
+    &::before {
+      transform: rotate(180deg);
+      top: 30%;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    font-family: "PoppinsRegular", "Arial", sans-serif;
+    min-width: 200px;
+    width: 200px;
+
+  }
+
+  &__placeholder,
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #C4C4C4;
+    font-family: "PoppinsRegular", "Arial", sans-serif;
+    padding: 10px;
+  }
+
+  &__title {
+    color: #000000;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    z-index: 2;
+    width: 90%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  &__item {
+    &:not(:nth-of-type(1)) {
+      margin-top: 15px;
+    }
+    padding: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    cursor: pointer;
+    &:hover {
+      color: #4d4d4d;
+    }
+  }
+}

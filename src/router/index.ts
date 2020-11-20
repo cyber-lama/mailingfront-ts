@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,10 +12,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/analytics',
     name: 'Analytics',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Login" */ '../views/Analytics.vue')
+    component: () => import(/* webpackChunkName: "Analytics" */ '../views/Analytics.vue')
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: () => import(/* webpackChunkName: "Projects" */ '../views/Projects.vue')
+  },
+  {
+    path: '/templates',
+    name: 'Templates',
+    component: () => import(/* webpackChunkName: "Templates" */ '../views/Templates.vue')
+  },
+  {
+    path: '/mailing',
+    name: 'Mailing',
+    component: () => import(/* webpackChunkName: "Mailing" */ '../views/Mailing.vue')
   },
 ]
 
@@ -25,4 +36,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;

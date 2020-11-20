@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import Logout from '../components/auth/Logout.vue';
-import DateSelector from '../components/analytics/DateSelector.vue';
-import MailingType from '../components/analytics/MailingType.vue';
+import Logout from '@/components/auth/Logout.vue';
+import DateSelector from '@/components/analytics/DateSelector.vue';
+import MailingType from '@/components/analytics/MailingType.vue';
 
 export default {
   name: 'Analytics',

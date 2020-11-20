@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M115 15V115H15C15 99.55 18.5 84.9 24.8 71.85C29.9 61.2 36.8 51.6 45.2 43.45C63.15 25.85 87.8 15 115 15Z" fill="#FCB715"/>
+<path d="M115 193.8C110.1 194.55 105.1 195 100 195C47.55 195 5 152.45 5 100C5 85.3 8.35 71.4 14.3 59C19.15 48.9 25.7 39.75 33.65 32C50.75 15.3 74.2 5 100 5C114.8 5 128.8 8.4 141.3 14.4C151.3 19.25 160.3 25.75 168 33.6C184.7 50.7 195 74.15 195 99.95C195 105.05 194.6 110.05 193.8 114.95" stroke="#1D1D1B" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98.85 45V100H63.85" stroke="#1D1D1B" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 195C97.25 195 95 192.75 95 190V180C95 177.25 97.25 175 100 175C102.75 175 105 177.25 105 180V190C105 192.75 102.75 195 100 195Z" fill="#1D1D1B"/>
+<path d="M100 25C97.25 25 95 22.75 95 20V10C95 7.25 97.25 5 100 5C102.75 5 105 7.25 105 10V20C105 22.75 102.75 25 100 25Z" fill="#1D1D1B"/>
+<path d="M5 100C5 97.25 7.25 95 10 95H20C22.75 95 25 97.25 25 100C25 102.75 22.75 105 20 105H10C7.25 105 5 102.75 5 100Z" fill="#1D1D1B"/>
+<path d="M175 100C175 97.25 177.25 95 180 95H190C192.75 95 195 97.25 195 100C195 102.75 192.75 105 190 105H180C177.25 105 175 102.75 175 100Z" fill="#1D1D1B"/>
+<path d="M142.3 125.8H159.95C169.7 125.8 177.6 133.7 177.6 143.45C177.6 153.2 169.7 161.1 159.95 161.1H142.3V125.8Z" stroke="#231F20" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142.3 161.1V190.95" stroke="#231F20" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142.3 161.1H133.75" stroke="#231F20" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 177H133.75" stroke="#231F20" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
