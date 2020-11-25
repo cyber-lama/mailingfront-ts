@@ -47,8 +47,9 @@
       <button
         :disabled="pageNumber >= pageCount -1"
         @click="nextPage">
-        <img src="/src/img/transfer-sent-watch.svg" alt="arrow-right">
-        <img alt="Vue logo" src="@/assets/logo.png">
+        <img :src="`${publicPath}static/images/icons/arrow-left.svg`" alt="arrow-left">
+        <img src="/img/arrow-right.a7ed8a25.svg" alt="arrow-left">
+        <img src="/images/icons/arrow-left.svg" alt="arrow-left">
       </button>
     </div>
   </div>
@@ -66,6 +67,7 @@ export default {
       pageNumber: 0,
       size: 4,
       sortingDirection: '',
+      publicPath: process.env.BASE_URL
     };
   },
   props: {
@@ -145,12 +147,12 @@ export default {
     paginatedData() {
       const start = this.pageNumber * this.size;
       const end = start + this.size;
-      console.log(start, end, this.items)
+      console.log(start, end, this.items.length, this.items.slice(start, end).length)
       return this.items.slice(start, end);
     },
   },
   mounted() {
-    console.log(this.items);
+    console.log(process.env.publicPath);
   },
 };
 </script>

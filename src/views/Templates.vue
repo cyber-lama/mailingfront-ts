@@ -127,5 +127,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/components/templates/templates';
+@import '@/style/components/templates/templates';
 </style>

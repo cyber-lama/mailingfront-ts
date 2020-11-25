@@ -20,7 +20,7 @@
     <div v-if="item.status" class="list__item-status">{{ item.status }}</div>
     <div class="list__item-actions">
       <button @click="showBlock" class="show">
-        <img src="static/images/icons/templates-edit.svg" alt="">
+        <img src="/static/images/icons/templates-edit.svg" alt="">
       </button>
       <div v-show="opened" class="list__item-hideblock">
         <button @click="editTemplate">Редактировать</button>
