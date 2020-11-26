@@ -1,15 +1,13 @@
+const CopyPlugin = require("copy-webpack-plugin");
+
 module.exports = {
-    // chainWebpack: config => {
-    //     config.module
-    //         .rule('images')
-    //         .use('url-loader')
-    //         .tap(options => {
-    //             return {
-    //                 transformAssetUrls: {
-    //                     source: './',
-    //                     img: './',
-    //                 }
-    //             }
-    //         })
-    // }
+    configureWebpack: {
+        plugins: [
+            new CopyPlugin({
+                patterns: [
+                    { from: "static", to: "static" },
+                ],
+            }),
+        ]
+    }
 }
