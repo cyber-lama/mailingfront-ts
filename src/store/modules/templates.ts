@@ -55,6 +55,7 @@ export default {
   },
   mutations: {
     updateTemplates(state, templates) { // обновляем список шаблонов
+      console.log( templates, "мутация updateTemplates")
       state.templates = templates.data;
     },
     controlAdditionallyTemplate(state, payload) {
@@ -73,6 +74,7 @@ export default {
   },
   getters: {
     getAllTemplates(state) {
+      console.log( state.templates, "геттер getAllTemplates")
       return state.templates;
     },
     getStatusAdditionally(state) {

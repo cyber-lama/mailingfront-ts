@@ -122,6 +122,7 @@ export default {
   computed: mapGetters(['getAllTemplates', 'getStatusAdditionally', 'getEditElement']),
   async mounted() {
     this.$store.dispatch('getTemplates');
+    console.log(this.$store.getters)
   },
 };
 </script>

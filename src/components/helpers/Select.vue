@@ -48,22 +48,20 @@ export default {
         this.items.map((item) => {
           if (item.id === event) {
             this.selectedItems = item.name;
-            // eslint-disable-next-line vue/custom-event-name-casing
-            this.$emit('setItem', item.id);
+            this.$emit('set-item', item.id);
             this.showItems();
           }
         });
       } else {
         this.selectedItems = event;
         this.showItems();
-        // eslint-disable-next-line vue/custom-event-name-casing
-        this.$emit('setItem', event);
+        this.$emit('set-item', event);
       }
     },
   },
 };
 </script>
 
-<style lang="scss">
-@import '../../style/components/helpers/select';
+<style type="scss">
+@import "../../style/components/helpers/select.scss";
 </style>

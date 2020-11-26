@@ -60,12 +60,12 @@
           </label>
           <Select :items="this.$store.getters.projectsList" :label="'Выбор проекта'" :id="3"
                   :placeholder="'Список проектов'"
-                  v-on:setItem="(value) => setSelectedValue(value,'selectedProject')"/>
+                  v-on:set-item="(value) => setSelectedValue(value,'selectedProject')"/>
           <Select :items="this.$store.getters.getAllTemplates" :label="'Выбор шаблона'" :id="2"
                   :placeholder="'Список шаблонов'"
-                  v-on:setItem="(value) => setSelectedValue(value,'selectedTemplate')"/>
+                  v-on:set-item="(value) => setSelectedValue(value,'selectedTemplate')"/>
           <Select :items="status" :label="'Статус'" :placeholder="'Список статусов'" :id="1"
-                  v-on:setItem="(value) => setSelectedValue(value,'selectedStatus')"/>
+                  v-on:set-item="(value) => setSelectedValue(value,'selectedStatus')"/>
 
           <label class="mailing__form-input-label">
             <p class="mailing__form-input-text">Дата начала</p>
@@ -76,7 +76,7 @@
           <!--Выбор типа окончания-->
           <Select :items="this.$store.getters.getEndingTypes" :label="'Выбор типа окончания'"
                   :placeholder="'Выбрать тип окончания'" :id="4"
-                  v-on:setItem="(value) => setSelectedValue(value,'setEndingType')"/>
+                  v-on:set-item="(value) => setSelectedValue(value,'setEndingType')"/>
 
 
           <label v-if="setEndingType.trim() === 'По количеству'" class="mailing__form-input-label">
@@ -135,7 +135,7 @@
 
           <Select :items="this.$store.getters.getEndingTypes" :label="'График рассылки'"
                   :placeholder="'Выбрать график рассылки'" :id="4"
-                  v-on:setItem="(value) => setSelectedValue(value,'setIntervalType')"/>
+                  v-on:set-item="(value) => setSelectedValue(value,'setIntervalType')"/>
 
 
           <label v-if="setIntervalType.trim() === 'По количеству'" class="mailing__form-input-label">

@@ -43,8 +43,9 @@ export default {
         const filtered = this.values.filter(
             item => item.name.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1,
         );
-        this.$store.commit(this.mutation, filtered);
-      } else this.$store.dispatch(this.action);
+        console.log(this.mutation, filtered)
+        this.$store.commit(this.mutation, filtered)
+      } else alert('Введите ключевые слова для поиска');
     },
   },
 };

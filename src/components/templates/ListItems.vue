@@ -47,9 +47,7 @@
       <button
         :disabled="pageNumber >= pageCount -1"
         @click="nextPage">
-        <img :src="`${publicPath}static/images/icons/arrow-left.svg`" alt="arrow-left">
-        <img src="/img/arrow-right.a7ed8a25.svg" alt="arrow-left">
-        <img src="/images/icons/arrow-left.svg" alt="arrow-left">
+        <img src="static/images/icons/arrow-right.svg" alt="arrow-left">
       </button>
     </div>
   </div>
